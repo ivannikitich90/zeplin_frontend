@@ -1,68 +1,308 @@
-.formContainer {
-  margin-top: 50px;
-  width: 50%;
+//.formContainer {
+//  margin-top: 50px;
+//  width: 50%;
+//  display: flex;
+//  justify-content: center;
+//
+//  .registerForm {
+//    max-width: 680px;
+//    width: 100%;
+//    /* Register/ save-user-info button */
+//    .userInfo {
+//      width: 40%;
+//
+//      .register {
+//        //@include namedBtn;
+//        margin: auto;
+//      }
+//
+//      .register:disabled {
+//        //background-color: $gray !important;
+//      }
+//
+//      .mat-radio-group {
+//        margin: 20px 0;
+//        display: block;
+//        text-align: center;
+//
+//        .mat-radio-button {
+//          margin-left: 10px;
+//        }
+//      }
+//
+//
+//    }
+//
+//    /* User profile image container */
+//    .userImg {
+//      width: 50%;
+//      float: right;
+//
+//      .profileImg {
+//        position: relative;
+//        width: 400px;
+//        height: 400px;
+//        background-size: cover !important;
+//
+//        i {
+//          position: absolute;
+//          right: 2px;
+//          //color: $white;
+//          font-size: 20px;
+//          cursor: pointer;
+//        }
+//      }
+//    }
+//
+//    /* Password show/hide button (only for register form) */
+//    .passToggler {
+//      position: absolute;
+//      right: 0;
+//      top: 5px;
+//      color: gray;
+//      font-size: 17px;
+//      cursor: pointer;
+//    }
+//
+//  }
+//}
+
+.Title {
+  margin-bottom: 40px
+}
+
+.Title .Main_title_sign_up {
+  font-size: 32px;
+  color: #3c3f40;
+  font-family: opensans_bold, Helvetica, Arial, sans-serif
+}
+
+.Looking .Looking_title {
+  margin-bottom: 20px
+}
+
+.Looking .Looking_title .Looking_title_text {
+  font-family: opensans_regular, Helvetica, Arial, sans-serif;
+  color: #444;
+  font-size: 20px
+}
+
+.Looking .Looking_buttons {
   display: flex;
-  justify-content: center;
+  margin-bottom: 25px
+}
 
-  .registerForm {
-    max-width: 680px;
-    width: 100%;
-    /* Register/ save-user-info button */
-    .userInfo {
-      width: 40%;
+.Looking .Looking_buttons button {
+  padding: 16px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+  text-align: center
+}
 
-      .register {
-        //@include namedBtn;
-        margin: auto;
-      }
+.Looking .Looking_buttons .Looking_button_Candidate {
+  border: 1px solid #444;
+  background-color: #fff;
+  font-family: opensans_regular, Helvetica, Arial, sans-serif;
+  color: #444;
+  margin-right: 25px
+}
 
-      .register:disabled {
-        //background-color: $gray !important;
-      }
+.Looking .Looking_buttons .Looking_for_job {
+  font-family: opensans_semibold, Helvetica, Arial, sans-serif;
+  color: #fff;
+  border: 1px solid #36d26b;
+  background-color: #36d26b
+}
 
-      .mat-radio-group {
-        margin: 20px 0;
-        display: block;
-        text-align: center;
+.Form_candidate .form_title {
+  margin-bottom: 20px
+}
 
-        .mat-radio-button {
-          margin-left: 10px;
-        }
-      }
+.Form_candidate .form_title .title_text {
+  font-size: 20px;
+  color: #444;
+  font-family: opensans_regular, Helvetica, Arial, sans-serif
+}
 
+.Form_candidate form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "Form"
+}
 
-    }
+.Form_candidate form .form_inputs {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr .8fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "Email Phone-Number ." "Password Retype-Password ." "First-Name Last-Name ." "Desired-Industry Desired-role job-type";
+  grid-area: Form
+}
 
-    /* User profile image container */
-    .userImg {
-      width: 50%;
-      float: right;
+.Form_candidate form .form_inputs .email {
+  grid-area: Email
+}
 
-      .profileImg {
-        position: relative;
-        width: 400px;
-        height: 400px;
-        background-size: cover !important;
+.Form_candidate form .form_inputs .password {
+  grid-area: Password
+}
 
-        i {
-          position: absolute;
-          right: 2px;
-          //color: $white;
-          font-size: 20px;
-          cursor: pointer;
-        }
-      }
-    }
+.Form_candidate form .form_inputs .first_name {
+  grid-area: First-Name
+}
 
-    /* Password show/hide button (only for register form) */
-    .passToggler {
-      position: absolute;
-      right: 0;
-      top: 5px;
-      color: gray;
-      font-size: 17px;
-      cursor: pointer;
-    }
+.Form_candidate form .form_inputs .desired_industry {
+  grid-area: Desired-Industry
+}
 
-  }
+.Form_candidate form .form_inputs .desired_role {
+  grid-area: Desired-role
+}
+
+.Form_candidate form .form_inputs .phone {
+  grid-area: Phone-Number
+}
+
+.Form_candidate form .form_inputs .retry_password {
+  grid-area: Retype-Password
+}
+
+.Form_candidate form .form_inputs .last_name {
+  grid-area: Last-Name
+}
+
+.Form_candidate form .form_inputs .job_type {
+  grid-area: job-type
+}
+
+.Form_candidate form .form_inputs div {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between
+}
+
+.Form_candidate form .form_inputs div label {
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-family: opensans_regular, Helvetica, Arial, sans-serif
+}
+
+.Form_candidate form .form_inputs div input {
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  padding: 10px;
+  width: 400px;
+  margin-right: 10px;
+  margin-bottom: 20px
+}
+
+.Form_candidate form .form_inputs div:last-child {
+  align-self: flex-end
+}
+
+.Form_candidate form .form_inputs div:last-child input {
+  width: 330px
+}
+
+.Profile {
+  margin-top: 20px
+}
+
+.Profile .Profile_data {
+  font-size: 14px;
+  color: #444;
+  font-family: opensans_regular, Helvetica, Arial, sans-serif
+}
+
+.Profile .Profile_data .Profile_image_pictures .glimpse_image_item {
+  border-radius: 50%;
+  width: 150px;
+  margin-top: 14px;
+  margin-bottom: 35px
+}
+
+.Profile .Profile_data .Profile_scills .Profile_scills_title {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 22px
+}
+
+.Profile .Profile_data .Profile_scills .Profile_scills_title .Profile_scills_title_italic {
+  font-family: opensans_italic, Helvetica, Arial, sans-serif
+}
+
+.Profile .Profile_data .Profile_scills .skills {
+  display: flex;
+  margin-bottom: 28px
+}
+
+.Profile .Profile_data .Profile_scills .skills .skills_buttons {
+  border-radius: 26px;
+  width: 97px;
+  padding: 6px;
+  margin-right: 15px;
+  justify-content: space-evenly;
+  font-family: opensans_regular, Helvetica, Arial, sans-serif;
+  font-size: 16px
+}
+
+.Profile .Profile_data .Profile_scills .skills .skills_buttons span {
+  margin-left: 5px;
+  display: block
+}
+
+.Profile .Profile_data .Profile_scills .skills .skills_buttons.delete {
+  background: #05a9ee;
+  color: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .15), 0 2px 25px 0 rgba(0, 0, 0, .15)
+}
+
+.Profile .Profile_data .Profile_scills .skills .skills_buttons.delete span {
+  font-size: 16px
+}
+
+.Profile .Profile_data .Profile_scills .skills .skills_buttons.add {
+  border: 1px solid #444
+}
+
+.Profile .Profile_data .Profile_scills .skills .skills_buttons.add span {
+  color: #444
+}
+
+.Profile .Profile_data .Profile_scills .skills .skills_buttons.add span.add {
+  font-size: 37px;
+  font-weight: 500;
+  line-height: 0
+}
+
+.Profile .Lindkedin_profil {
+  margin: 7px 0 30px
+}
+
+.Profile .Lindkedin_profil label.Lindkedin_section_text {
+  font-family: opensans_regular, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+  display: block
+}
+
+.Profile .Lindkedin_profil input {
+  border-radius: 5px;
+  border: 1px solid #b0b0b0;
+  width: 100%;
+  padding: 11px 23px;
+  color: #838283;
+  font-size: 14px;
+  font-family: opensans_regular, Helvetica, Arial, sans-serif
+}
+
+.Profile .Button_sign_up button {
+  background: #36d26b;
+  font-size: 16px;
+  font-family: opensans_bold, Helvetica, Arial, sans-serif;
+  width: 150px;
+  padding: 17px 0
 }

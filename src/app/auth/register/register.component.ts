@@ -31,8 +31,8 @@ export class RegisterComponent implements OnInit {
     }
 
     getAuthUserData(): void {
-        const userData = jwtDecode(localStorage.getItem('token'));
-        this.registerForm.patchValue(userData);
+        // const userData = jwtDecode(localStorage.getItem('token'));
+        // this.registerForm.patchValue(userData);
     }
 
     togglePass(): void {

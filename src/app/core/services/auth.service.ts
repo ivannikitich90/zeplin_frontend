@@ -20,7 +20,7 @@ export class AuthService {
         // Receiving user data from here!!!!
         if (this.loggedIn()) {
             const token = localStorage.getItem('token');
-            this.userData = jwtDecode(token);
+            // this.userData = jwtDecode(token);
         }
     }
 

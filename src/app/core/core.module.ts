@@ -16,6 +16,7 @@ import {ToastrModule} from 'ngx-toastr';
 import {HeaderComponent} from '@core/components/header/header.component';
 import {HomeComponent} from '@core/components/home/home.component';
 import {FooterComponent} from '@core/components/footer/footer.component';
+import {LoginComponent} from '../auth/login/login.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -31,7 +32,8 @@ export function tokenGetter() {
     declarations: [
         HeaderComponent,
         FooterComponent,
-        HomeComponent
+        HomeComponent,
+        LoginComponent
     ],
     imports: [
         CommonModule,
@@ -48,7 +50,7 @@ export function tokenGetter() {
             config: {
                 tokenGetter,
                 whitelistedDomains: ['localhost:3000', '68.183.36.96:80', 'secretsouth.ie', '68.183.36.96'],
-                blacklistedRoutes: ['localhost:3000/auth/', '68.183.36.96:80/auth/', 'secretsouth.ie/auth/', '68.183.36.96/auth/']
+                blacklistedRoutes: ['localhost:3000/auth/', '68.183.36.96:80/auth/', 'secretsouth.ie/auth/']
             }
         }),
         ToastrModule.forRoot({
@@ -65,7 +67,11 @@ export function tokenGetter() {
     ],
     exports: [
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        LoginComponent
+    ],
+    entryComponents: [
+        LoginComponent
     ]
 })
 export class CoreModule {

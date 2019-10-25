@@ -41,7 +41,8 @@
 <!--    </mat-toolbar>-->
 <!--</nav>-->
 <header>
-    <div class="logo">Sk<img id="LogoSvg" src="assets/images/logo-green.svg" onerror="this.onerror=null; this.src = './assets/img/logo-green-x.png'">pped.io</div>
+    <div class="logo" (click)="router.navigate(['/'])">Sk<img id="LogoSvg" src="assets/images/logo-green.svg">pped.io
+    </div>
     <nav class="Header_nav">
         <ul>
             <li><a href="#">Recruiters</a></li>
@@ -50,8 +51,8 @@
         </ul>
     </nav>
     <div class="auth">
-        <button onclick="location.href='Sign_up.html'">Sign Up</button>
-        <button class="open_login" data-modal-target="#modal">Log in</button>
+        <button [hidden]="routerUrl==='/auth/register'" (click)="router.navigate(['auth/register'])">Sign Up</button>
+        <button class="open_login" data-modal-target="#modal" (click)="openLogin()">Log in</button>
         <div class="modal" id="modal">
             <div class="modal_content center">
                 <h2 class="modal_content_title">Log in to your account</h2>

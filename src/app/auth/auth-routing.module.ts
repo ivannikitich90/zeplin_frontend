@@ -5,9 +5,9 @@ import {RegisterComponent} from './register/register.component';
 import {AuthGuard} from '@core/guards/auth.guard';
 
 const routes: Routes = [
-    {
-        path: 'login', component: LoginComponent
-    },
+    // {
+    //     path: 'login', component: LoginComponent
+    // },
     {
         path: 'register', component: RegisterComponent
     },

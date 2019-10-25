@@ -1,50 +1,131 @@
-<div class="formContainer">
-    <form [formGroup]="registerForm" class="registerForm">
-        <!-- User details box -->
-        <div class="userInfo">
-            <!-- First name field -->
-            <mat-form-field>
-                <input matInput [placeholder]="'First name'" [formControlName]="'first_name'" required>
+<!--<div class="formContainer">-->
+<!--    <form [formGroup]="registerForm" class="registerForm">-->
+<!--        &lt;!&ndash; User details box &ndash;&gt;-->
+<!--        <div class="userInfo">-->
+<!--            &lt;!&ndash; First name field &ndash;&gt;-->
+<!--            <mat-form-field>-->
+<!--                <input matInput [placeholder]="'First name'" [formControlName]="'first_name'" required>-->
 
-                <mat-error *ngIf="firstName.hasError('required')">First name is <strong>required</strong></mat-error>
-            </mat-form-field>
+<!--                <mat-error *ngIf="firstName.hasError('required')">First name is <strong>required</strong></mat-error>-->
+<!--            </mat-form-field>-->
 
-            <!-- Last name field -->
-            <mat-form-field>
-                <input matInput [placeholder]="'Last Name'" [formControlName]="'last_name'" required>
+<!--            &lt;!&ndash; Last name field &ndash;&gt;-->
+<!--            <mat-form-field>-->
+<!--                <input matInput [placeholder]="'Last Name'" [formControlName]="'last_name'" required>-->
 
-                <mat-error *ngIf="lastName.hasError('required')">Last name is <strong>required</strong></mat-error>
-            </mat-form-field>
+<!--                <mat-error *ngIf="lastName.hasError('required')">Last name is <strong>required</strong></mat-error>-->
+<!--            </mat-form-field>-->
 
 
-            <!-- Gender field -->
-            <mat-radio-group name="gender" formControlName="gender">
-                <mat-radio-button [value]="'male'">Male</mat-radio-button>
-                <mat-radio-button [value]="'female'">Female</mat-radio-button>
-            </mat-radio-group>
+<!--            &lt;!&ndash; Gender field &ndash;&gt;-->
+<!--            <mat-radio-group name="gender" formControlName="gender">-->
+<!--                <mat-radio-button [value]="'male'">Male</mat-radio-button>-->
+<!--                <mat-radio-button [value]="'female'">Female</mat-radio-button>-->
+<!--            </mat-radio-group>-->
 
-            <!-- E-mail field -->
-            <mat-form-field>
-                <input matInput [placeholder]="'Email'" formControlName="email" required>
-                <mat-error [hidden]="!email.hasError('required')">E-mail is <strong>required</strong></mat-error>
-                <mat-error [hidden]="!email.hasError('patternInvalid')">E-mail is <strong>invalid</strong></mat-error>
-            </mat-form-field>
+<!--            &lt;!&ndash; E-mail field &ndash;&gt;-->
+<!--            <mat-form-field>-->
+<!--                <input matInput [placeholder]="'Email'" formControlName="email" required>-->
+<!--                <mat-error [hidden]="!email.hasError('required')">E-mail is <strong>required</strong></mat-error>-->
+<!--                <mat-error [hidden]="!email.hasError('patternInvalid')">E-mail is <strong>invalid</strong></mat-error>-->
+<!--            </mat-form-field>-->
 
-            <!-- Password field (shown only in user registration case)-->
-            <mat-form-field>
-                <input [type]="!passHidden?'password':'text'" matInput [placeholder]="'Password'"
-                       formControlName="password" required>
-                <mat-slide-toggle class="passToggler" (change)="togglePass()"></mat-slide-toggle>
-                <mat-error [hidden]="!pass.hasError('required')">Password is <strong>required</strong></mat-error>
-            </mat-form-field>
+<!--            &lt;!&ndash; Password field (shown only in user registration case)&ndash;&gt;-->
+<!--            <mat-form-field>-->
+<!--                <input [type]="!passHidden?'password':'text'" matInput [placeholder]="'Password'"-->
+<!--                       formControlName="password" required>-->
+<!--                <mat-slide-toggle class="passToggler" (change)="togglePass()"></mat-slide-toggle>-->
+<!--                <mat-error [hidden]="!pass.hasError('required')">Password is <strong>required</strong></mat-error>-->
+<!--            </mat-form-field>-->
 
-            <button type="button" mat-raised-button color="warn" class="backBtn" (click)="router.navigate([redirectUrl])">
-                <mat-icon>arrow_back</mat-icon>
-            </button>
-            <button mat-raised-button color="primary" (click)="register()">
-                Save
-            </button>
-            <!-- [disabled]="registerForm.invalid"-->
+<!--            <button type="button" mat-raised-button color="warn" class="backBtn" (click)="router.navigate([redirectUrl])">-->
+<!--                <mat-icon>arrow_back</mat-icon>-->
+<!--            </button>-->
+<!--            <button mat-raised-button color="primary" (click)="register()">-->
+<!--                Save-->
+<!--            </button>-->
+<!--            &lt;!&ndash; [disabled]="registerForm.invalid"&ndash;&gt;-->
+<!--        </div>-->
+<!--    </form>-->
+<!--</div>-->
+<div class="content_wrap">
+    <div class="Title content">
+        <h1 class="Main_title_sign_up">Let's get you started</h1>
+    </div>
+    <div class="Looking content">
+        <div class="Looking_title">
+            <h3 class="Looking_title_text title_text">What are you here for</h3>
         </div>
-    </form>
+        <div class="Looking_buttons">
+            <button class="Looking_button_Candidate btn">Looking For Candidate</button>
+            <button class="Looking_for_job btn">Looking For A Job</button>
+        </div>
+    </div>
+    <div class="Form_candidate content">
+        <div class="form_title">
+            <h2 class="title_text">Great! Lets get you set up</h2>
+        </div>
+        <form>
+            <div class="form_inputs">
+                <div class="email">
+                    <label>Email *</label>
+                    <input type="email">
+                </div>
+                <div class="password">
+                    <label>Password *</label>
+                    <input type="password">
+                </div>
+                <div class="first_name">
+                    <label>First Name *</label>
+                    <input type="text">
+                </div>
+                <div class="desired_industry">
+                    <label>Desired Industry *</label>
+                    <input type="text">
+                </div>
+                <div class="phone">
+                    <label>Phone Number *</label>
+                    <input type="phone">
+                </div>
+                <div class="retry_password">
+                    <label>Retype Password *</label>
+                    <input type="password">
+                </div>
+                <div class="last_name">
+                    <label>Last Name *</label>
+                    <input type="text">
+                </div>
+                <div class="desired_role">
+                    <label>Desired role *</label>
+                    <input type="text">
+                </div>
+                <div class="job_type">
+                    <label>Job Type*</label>
+                    <input type="text">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="Profile content">
+        <div class="Profile_data">
+            <div class="Profile_image_pictures">
+                <p>Profile Image</p><img class="glimpse_image_item" src="assets/img/img_avatar3.png" alt="persons">
+            </div>
+            <div class="Profile_scills">
+                <p class="Profile_scills_title">Top 3 Skills <span class="Profile_scills_title_italic">(they will help us finding the best recruiter for you)</span>
+                </p>
+                <div class="skills">
+                    <div class="skills_buttons delete center">Java<span class="delete">X</span></div>
+                    <div class="skills_buttons add center">Add<span class="add">+</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="Lindkedin_profil">
+            <label class="Lindkedin_section_text">Linkedin URL *</label>
+            <input type="text" placeholder="https://www.linkedin.com/in/">
+        </div>
+        <div class="Button_sign_up">
+            <button class="btn">Sign Up</button>
+        </div>
+    </div>
 </div>

@@ -1,7 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {SubjectService} from '@core/services/subject.service';
 import {AuthService} from '@core/services/auth.service';
-import {Router} from '@angular/router';
+import {NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {filter} from 'rxjs/operators';
+import {MatDialog} from '@angular/material';
+import {LoginComponent} from '../../../auth/login/login.component';
 
 @Component({
     selector: 'app-header',
@@ -10,21 +13,33 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
     appTheme = 'light';
+    routerUrl = '';
 
     constructor(
         private subject: SubjectService,
         public auth: AuthService,
-        public router: Router
+        public router: Router,
+        private dialog: MatDialog
     ) {
     }
 
     ngOnInit() {
+        this.router.events.pipe(
+            filter(event => event instanceof NavigationEnd)
+        ).subscribe((event: NavigationEnd) => {
+            this.routerUrl = event.url;
+        });
     }
 
     changeTheme() {
         this.appTheme = this.appTheme === 'dark' ? 'light' : 'dark';
         this.subject.setTheme(this.appTheme);
     }
+
+    openLogin() {
+        this.dialog.open(LoginComponent, {width: '200px', height: '280px'});
+    }
+
 
     logout() {
         this.auth.logout().subscribe(() => {
