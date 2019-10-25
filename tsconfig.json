@@ -27,6 +27,9 @@
       ],
       "@shared/*": [
         "app/shared/*"
+      ],
+      "@fonts/*": [
+        "assets/fonts/*"
       ]
     }
   }

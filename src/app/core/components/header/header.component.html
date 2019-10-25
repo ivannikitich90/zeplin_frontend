@@ -1,42 +1,74 @@
-<nav class="{{appTheme}} mat-app-background">
-    <mat-toolbar>
+<!--<nav class="{{appTheme}} mat-app-background">-->
+<!--    <mat-toolbar>-->
 
-        <div class="leftGroup">
-            <button mat-icon-button [matTooltip]="'Profile'" (click)="router.navigate(['auth/profile'])"
-                    *ngIf="router.url.includes('profile')">
-                <i class="fa fa-user"></i>
-            </button>
-        </div>
+<!--        <div class="leftGroup">-->
+<!--            <button mat-icon-button [matTooltip]="'Profile'" (click)="router.navigate(['auth/profile'])"-->
+<!--                    *ngIf="router.url.includes('profile')">-->
+<!--                <i class="fa fa-user"></i>-->
+<!--            </button>-->
+<!--        </div>-->
 
-        <div class="centerGroup">
+<!--        <div class="centerGroup">-->
 
-        </div>
+<!--        </div>-->
 
-        <div class="rightGroup">
-            <!-- Settings button and its menu -->
-            <button mat-icon-button [matMenuTriggerFor]="menu" [matTooltip]="'Settings'" class="settings">
-                <i class="fa fa-cog"></i>
-            </button>
-            <mat-menu #menu="matMenu" class="{{appTheme}}">
-                <mat-card>
-                    <div class="themeToggler">
-                        <small>Theme</small>
-                        <mat-divider></mat-divider>
-                        <div class="togglerContainer">
-                            light
-                            <mat-slide-toggle color="primary" (change)="changeTheme()"
-                                              [checked]="appTheme==='dark'">dark
-                            </mat-slide-toggle>
-                        </div>
+<!--        <div class="rightGroup">-->
+<!--            &lt;!&ndash; Settings button and its menu &ndash;&gt;-->
+<!--            <button mat-icon-button [matMenuTriggerFor]="menu" [matTooltip]="'Settings'" class="settings">-->
+<!--                <i class="fa fa-cog"></i>-->
+<!--            </button>-->
+<!--            <mat-menu #menu="matMenu" class="{{appTheme}}">-->
+<!--                <mat-card>-->
+<!--                    <div class="themeToggler">-->
+<!--                        <small>Theme</small>-->
+<!--                        <mat-divider></mat-divider>-->
+<!--                        <div class="togglerContainer">-->
+<!--                            light-->
+<!--                            <mat-slide-toggle color="primary" (change)="changeTheme()"-->
+<!--                                              [checked]="appTheme==='dark'">dark-->
+<!--                            </mat-slide-toggle>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </mat-card>-->
+<!--            </mat-menu>-->
+
+<!--            &lt;!&ndash; Logout button &ndash;&gt;-->
+<!--            <button mat-icon-button [matTooltip]="'Logout'" (click)="logout()" *ngIf="auth.loggedIn()">-->
+<!--                <mat-icon>exit_to_app</mat-icon>-->
+<!--            </button>-->
+<!--        </div>-->
+
+<!--    </mat-toolbar>-->
+<!--</nav>-->
+<header>
+    <div class="logo">Sk<img id="LogoSvg" src="assets/images/logo-green.svg" onerror="this.onerror=null; this.src = './assets/img/logo-green-x.png'">pped.io</div>
+    <nav class="Header_nav">
+        <ul>
+            <li><a href="#">Recruiters</a></li>
+            <li><a href="#">Companies</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <div class="auth">
+        <button onclick="location.href='Sign_up.html'">Sign Up</button>
+        <button class="open_login" data-modal-target="#modal">Log in</button>
+        <div class="modal" id="modal">
+            <div class="modal_content center">
+                <h2 class="modal_content_title">Log in to your account</h2>
+                <form class="center" action="#">
+                    <div class="profile_login center">
+                        <label for="email">Email *</label>
+                        <input id="email" type="email">
+                        <label for="password">Password *</label>
+                        <input id="password" type="password">
                     </div>
-                </mat-card>
-            </mat-menu>
-
-            <!-- Logout button -->
-            <button mat-icon-button [matTooltip]="'Logout'" (click)="logout()" *ngIf="auth.loggedIn()">
-                <mat-icon>exit_to_app</mat-icon>
-            </button>
+                    <div class="modal_submit center">
+                        <input class="btn log_in" type="submit" value="Log in">
+                        <input class="btn forgot" type="submit" value="Forgot Password?">
+                    </div>
+                </form>
+            </div>
         </div>
-
-    </mat-toolbar>
-</nav>
+        <div id="overlay"></div>
+    </div>
+</header>

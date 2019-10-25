@@ -1,33 +1,103 @@
-nav {
-  position: sticky;
-  width: 100%;
+//nav {
+//  position: sticky;
+//  width: 100%;
+//
+//  .leftGroup {
+//    width: 20%;
+//  }
+//
+//  .centerGroup {
+//    width: 60%;
+//  }
+//
+//  .rightGroup {
+//    width: 20%;
+//    display: flex;
+//    justify-content: flex-end;
+//  }
+//}
+//
+//
+//.themeToggler {
+//  width: 280px;
+//
+//  small {
+//    margin-left: 2px;
+//  }
+//
+//  .togglerContainer {
+//    text-align: right;
+//    padding-right: 10px;
+//    margin-right: 14px;
+//  }
+//}
+@import "../../../../assets/styles/_variables";
 
-  .leftGroup {
-    width: 20%;
+
+header {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  display: grid;
+  grid-template-columns: .5fr 1fr .9fr;
+  grid-template-areas: "Logo Nav-Header Aunth";
+  grid-template-rows: 1fr;
+  background: #05a9ee;
+  color: $color_3;
+  padding: 30px;
+  align-items: center;
+
+  nav.Header_nav {
+    font-family: $font_family_5;
+    font-size: 20px;
+    color: $color_6;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+        padding: 20px;
+        color: $color_3;
+        transition: 1s ease;
+        font-family: $font_family_6;
+
+        &:hover {
+          background: #fff;
+          color: $color_7;
+          border-radius: 25px;
+        }
+      }
+    }
   }
 
-  .centerGroup {
-    width: 60%;
-  }
-
-  .rightGroup {
-    width: 20%;
+  .auth {
     display: flex;
     justify-content: flex-end;
-  }
-}
+    grid-area: Aunth;
 
+    button {
+      margin: 15px;
+      background-color: $background_color_5;
+      border: 2px solid #fff;
+      text-align: center;
+      color: $color_3;
+      border-radius: 30px;
+      padding: 10px 40px;
+      transition: .5s;
+      font-family: $font_family_7;
+      position: relative;
+      white-space: nowrap;
 
-.themeToggler {
-  width: 280px;
-
-  small {
-    margin-left: 2px;
-  }
-
-  .togglerContainer {
-    text-align: right;
-    padding-right: 10px;
-    margin-right: 14px;
+      &:hover {
+        background: #3498db;
+        cursor: pointer;
+      }
+    }
   }
 }
