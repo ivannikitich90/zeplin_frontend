@@ -209,7 +209,7 @@
 }
 
 .Form_candidate form .form_inputs div:last-child input, .Form_candidate form .form_inputs div:last-child select {
-  max-width: 330px;
+  //max-width: 330px;
   width: 100%;
 }
 
@@ -324,6 +324,10 @@
 
 .Lindkedin_profile, .referralEmails {
   max-width: 642px;
+}
+
+#referralEmails {
+  background-color: white;
 }
 
 .content {

@@ -61,4 +61,8 @@ export class AuthService {
         }
         return false;
     }
+
+    register(data) {
+        return this.http.post(`${API_URL}auth/register`, data);
+    }
 }

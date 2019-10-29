@@ -3,6 +3,8 @@ import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/form
 import {Router} from '@angular/router';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material';
+import {AuthService} from '@core/services/auth.service';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
     selector: 'app-register',
@@ -14,18 +16,20 @@ export class RegisterComponent implements OnInit {
     registerForm: FormGroup;
     passHidden = true;
     isCandidate = true;
-    referalEmails = [];
+    referralEmails = [];
     readonly separatorKeysCodes: number[] = [ENTER, COMMA];
 
     constructor(
         private fb: FormBuilder,
-        private router: Router
+        private router: Router,
+        public auth: AuthService,
+        private toastr: ToastrService
     ) {
         this.registerForm = this.fb.group({
             first_name: ['', Validators.required],
             last_name: ['', Validators.required],
             email: ['', Validators.required],
-            gender: ['', Validators.required],
+            phone: ['', Validators.required],
             password: ['', Validators.required],
         });
     }
@@ -77,11 +81,20 @@ export class RegisterComponent implements OnInit {
     }
 
     addReferralEmail(e: MatChipInputEvent) {
-        this.referalEmails.push(e.value);
+        if (e.value) {
+            this.referralEmails.push(e.value);
+        }
     }
 
     removeReferralEmail(e) {
-        this.referalEmails = this.referalEmails.filter((value) => value !== e);
+        this.referralEmails = this.referralEmails.filter((value) => value !== e);
     }
 
+
+    registerUser() {
+        this.auth.register(this.registerForm.value).subscribe(dt => {
+            this.toastr.success('Registered successfully');
+            this.router.navigate(['/']);
+        });
+    }
 }
