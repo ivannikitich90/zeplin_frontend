@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-import * as jwtDecode from 'jwt-decode';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {MatChipInputEvent} from '@angular/material';
 
 @Component({
     selector: 'app-register',
@@ -12,6 +13,9 @@ export class RegisterComponent implements OnInit {
 
     registerForm: FormGroup;
     passHidden = true;
+    isCandidate = true;
+    referalEmails = [];
+    readonly separatorKeysCodes: number[] = [ENTER, COMMA];
 
     constructor(
         private fb: FormBuilder,
@@ -67,4 +71,17 @@ export class RegisterComponent implements OnInit {
     get pass(): AbstractControl {
         return this.registerForm.get('password');
     }
+
+    toggleCandidateRec() {
+        this.isCandidate = !this.isCandidate;
+    }
+
+    addReferralEmail(e: MatChipInputEvent) {
+        this.referalEmails.push(e.value);
+    }
+
+    removeReferralEmail(e) {
+        this.referalEmails = this.referalEmails.filter((value) => value !== e);
+    }
+
 }

@@ -34,6 +34,7 @@ export class RequestInterceptor implements HttpInterceptor {
                 // this.common.tokenSend = true;
                 // this.common.tokenChecking = false;
 
+                console.log(err);
                 if (message.hasOwnProperty('msg')) {
                     this.toastr.error('', message.msg.replace(/<(.|\n)*?>/g, ''));
                 } else if (message) {

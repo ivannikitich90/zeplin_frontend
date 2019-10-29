@@ -277,11 +277,11 @@
   line-height: 0
 }
 
-.Profile .Lindkedin_profil {
+.Profile .Lindkedin_profile, .referralEmails {
   margin: 7px 0 30px
 }
 
-.Profile .Lindkedin_profil label.Lindkedin_section_text {
+.Profile label.Lindkedin_section_text {
   font-family: opensans_regular, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #444;
@@ -289,7 +289,7 @@
   display: block
 }
 
-.Profile .Lindkedin_profil input {
+.Profile input {
   border-radius: 5px;
   border: 1px solid #b0b0b0;
   width: 100%;

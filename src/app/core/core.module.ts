@@ -55,7 +55,8 @@ export function tokenGetter() {
         }),
         ToastrModule.forRoot({
             preventDuplicates: true
-        })
+        }),
+
     ],
     providers: [
         JwtHelperService,
