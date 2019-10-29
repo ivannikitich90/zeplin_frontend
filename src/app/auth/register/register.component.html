@@ -7,8 +7,12 @@
             <h3 class="Looking_title_text title_text">What are you here for</h3>
         </div>
         <div class="Looking_buttons">
-            <button class="Looking_button_Candidate btn" (click)="toggleCandidateRec()">Looking For Candidate</button>
-            <button class="Looking_for_job btn" (click)="toggleCandidateRec()">Looking For A Job</button>
+            <button class="Looking_button_Candidate btn" [class.selectedRole]="isCandidate"
+                    (click)="toggleCandidateRec()">Looking For Candidate
+            </button>
+            <button class="Looking_for_job btn" [class.selectedRole]="!isCandidate" (click)="toggleCandidateRec()">
+                Looking For A Job
+            </button>
         </div>
     </div>
     <div id="candidateDetails">
@@ -48,27 +52,27 @@
                     <ng-container *ngIf="isCandidate">
                         <div class="desired_industry">
                             <label>Desired Industry *</label>
-                          <select>
-                            <option></option>
-                            <option>1</option>
-                            <option>2</option>
-                          </select>
+                            <select>
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
                         </div>
                         <div class="desired_role">
                             <label>Desired role *</label>
-                          <select>
-                            <option></option>
-                            <option>1</option>
-                            <option>2</option>
-                          </select>
+                            <select>
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
                         </div>
                         <div class="job_type">
                             <label>Job Type*</label>
-                          <select>
-                            <option></option>
-                            <option>1</option>
-                            <option>2</option>
-                          </select>
+                            <select>
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
                         </div>
                     </ng-container>
                 </div>
@@ -77,7 +81,8 @@
         <div class="Profile content">
             <div class="Profile_data">
                 <div class="Profile_image_pictures">
-                    <p>Profile Image</p><img class="glimpse_image_item" src="assets/images/img_avatar3.png" alt="persons">
+                    <p>Profile Image</p><img class="glimpse_image_item" src="assets/images/img_avatar3.png"
+                                             alt="persons">
                 </div>
                 <ng-container *ngIf="isCandidate">
                     <div class="Profile_scills">

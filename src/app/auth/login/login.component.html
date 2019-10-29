@@ -1,27 +1,14 @@
 <div class="loginContainer">
     <mat-card-title>Login to your account</mat-card-title>
     <form [formGroup]="loginForm">
-
-<!--        &lt;!&ndash; E-mail field &ndash;&gt;-->
-<!--        <mat-form-field appearance="outline">-->
-<!--            <mat-label>E-mail</mat-label>-->
-<!--            <input type="text" matInput required formControlName="email">-->
-<!--        </mat-form-field>-->
-
-<!--        &lt;!&ndash; Password field &ndash;&gt;-->
-<!--        <mat-form-field appearance="outline">-->
-<!--            <mat-label>Password</mat-label>-->
-<!--            <input type="password" matInput required formControlName="password">-->
-<!--        </mat-form-field>-->
-
-      <div class="email">
-        <label for="email">Email*</label>
-        <input type="email" id="email">
-      </div>
-      <div class="password">
-        <label>Password *</label>
-        <input type="password">
-      </div>
+        <div class="email">
+            <label for="email">Email*</label>
+            <input type="email" id="email" formControlName="email">
+        </div>
+        <div class="password">
+            <label>Password *</label>
+            <input type="password" formControlName="password">
+        </div>
 
         <!-- Regular & social login buttons -->
         <div class="loginBtns">

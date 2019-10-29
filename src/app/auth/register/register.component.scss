@@ -101,7 +101,7 @@
   text-align: center
 }
 
-.Looking .Looking_buttons .Looking_button_Candidate {
+.Looking .Looking_buttons .Looking_button_Candidate, .Looking_for_job {
   border: 1px solid #444;
   background-color: #fff;
   font-family: opensans_regular, Helvetica, Arial, sans-serif;
@@ -110,10 +110,14 @@
 }
 
 .Looking .Looking_buttons .Looking_for_job {
-  font-family: opensans_semibold, Helvetica, Arial, sans-serif;
-  color: #fff;
-  border: 1px solid #36d26b;
-  background-color: #36d26b
+  //font-family: opensans_semibold, Helvetica, Arial, sans-serif;
+}
+
+.selectedRole {
+  border: 1px solid #36d26b !important;
+  background-color: #36d26b !important;
+  color: #fff !important;
+  font-family: opensans_bold, Helvetica, Arial, sans-serif !important;
 }
 
 .Form_candidate .form_title {
@@ -190,7 +194,7 @@
   font-family: opensans_regular, Helvetica, Arial, sans-serif
 }
 
-.Form_candidate form .form_inputs div input,.Form_candidate form .form_inputs div select {
+.Form_candidate form .form_inputs div input, .Form_candidate form .form_inputs div select {
   border: 1px solid #b1b1b1;
   border-radius: 5px;
   padding: 10px;
@@ -204,7 +208,7 @@
   align-self: flex-end
 }
 
-.Form_candidate form .form_inputs div:last-child input,.Form_candidate form .form_inputs div:last-child select {
+.Form_candidate form .form_inputs div:last-child input, .Form_candidate form .form_inputs div:last-child select {
   max-width: 330px;
   width: 100%;
 }
@@ -313,12 +317,15 @@
   width: 150px;
   padding: 17px 0
 }
+
 .Button_sign_up {
   padding-bottom: 60px;
 }
-.Lindkedin_profile,.referralEmails {
+
+.Lindkedin_profile, .referralEmails {
   max-width: 642px;
 }
+
 .content {
   //max-width: 974px;
   //width:100%;
@@ -331,8 +338,8 @@
     display: block;
   }
 
-  .Form_candidate form .form_inputs div input,.Form_candidate form .form_inputs div select,
-  .Form_candidate form .form_inputs div:last-child input,.Form_candidate form .form_inputs div:last-child select {
+  .Form_candidate form .form_inputs div input, .Form_candidate form .form_inputs div select,
+  .Form_candidate form .form_inputs div:last-child input, .Form_candidate form .form_inputs div:last-child select {
     max-width: 100%;
   }
 
