@@ -4,6 +4,7 @@ import {AuthService} from '@core/services/auth.service';
 import {API_URL} from '@core/constants/app.config';
 import {Subscription} from 'rxjs';
 import {Router} from '@angular/router';
+import {MatDialogRef} from '@angular/material';
 
 @Component({
     selector: 'app-login',
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     constructor(
         private fb: FormBuilder,
         public auth: AuthService,
-        public router: Router
+        public router: Router,
+        private dialogRef: MatDialogRef<LoginComponent>
     ) {
         this.loginForm = this.fb.group({
             email: ['', Validators.required],
@@ -46,6 +48,7 @@ export class LoginComponent implements OnInit, OnDestroy {
                 localStorage.setItem('token', (dt.hasOwnProperty('token') ? dt.token : ''));
 
                 this.router.navigate(['/']);
+                this.dialogRef.close();
             })
         );
     }

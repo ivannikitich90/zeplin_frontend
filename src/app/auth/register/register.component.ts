@@ -92,8 +92,11 @@ export class RegisterComponent implements OnInit {
 
 
     registerUser() {
-        this.auth.register(this.registerForm.value).subscribe(dt => {
+        this.auth.register(this.registerForm.value).subscribe((dt: any) => {
             this.toastr.success('Registered successfully');
+            // Saving token to browser local storage
+            localStorage.setItem('token', (dt.hasOwnProperty('token') ? dt.token : ''));
+
             this.router.navigate(['/']);
         });
     }

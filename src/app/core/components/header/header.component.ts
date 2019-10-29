@@ -5,6 +5,7 @@ import {NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {filter} from 'rxjs/operators';
 import {MatDialog} from '@angular/material';
 import {LoginComponent} from '../../../auth/login/login.component';
+import * as jwtDecode from 'jwt-decode';
 
 @Component({
     selector: 'app-header',
@@ -14,6 +15,7 @@ import {LoginComponent} from '../../../auth/login/login.component';
 export class HeaderComponent implements OnInit {
     appTheme = 'light';
     routerUrl = '';
+    authUser;
 
     constructor(
         private subject: SubjectService,
@@ -29,6 +31,11 @@ export class HeaderComponent implements OnInit {
         ).subscribe((event: NavigationEnd) => {
             this.routerUrl = event.url;
         });
+
+        const token = localStorage.getItem('token');
+        if (token) {
+            this.authUser = jwtDecode(token);
+        }
     }
 
     changeTheme() {

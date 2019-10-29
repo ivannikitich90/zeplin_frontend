@@ -51,8 +51,14 @@
         </ul>
     </nav>
     <div class="auth">
-        <button [hidden]="routerUrl==='/auth/register'" (click)="router.navigate(['auth/register'])">Sign Up</button>
-        <button class="open_login" data-modal-target="#modal" (click)="openLogin()">Log in</button>
+        <button [hidden]="routerUrl==='/auth/register'" (click)="router.navigate(['auth/register'])"
+                *ngIf="!auth.loggedIn()">Sign Up
+        </button>
+        <button class="open_login" data-modal-target="#modal" (click)="openLogin()" *ngIf="!auth.loggedIn()">Log in
+        </button>
+        <strong class="authUser" *ngIf="auth.loggedIn() && authUser">
+            Hello, {{authUser.first_name + ' ' + authUser.last_name}}
+        </strong>
         <div class="modal" id="modal">
             <div class="modal_content center">
                 <h2 class="modal_content_title">Log in to your account</h2>
