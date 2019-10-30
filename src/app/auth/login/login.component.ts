@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
                 if (dt.hasOwnProperty('token')) {
 
-                    const token = dt.token
+                    const token = dt.token;
 
                     // Saving token to browser local storage
                     localStorage.setItem('token', token);
