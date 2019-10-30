@@ -5,6 +5,7 @@ import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material';
 import {AuthService} from '@core/services/auth.service';
 import {ToastrService} from 'ngx-toastr';
+import {SubjectService} from '@core/services/subject.service';
 
 @Component({
     selector: 'app-register',
@@ -23,11 +24,13 @@ export class RegisterComponent implements OnInit {
         private fb: FormBuilder,
         private router: Router,
         public auth: AuthService,
-        private toastr: ToastrService
+        private toastr: ToastrService,
+        private subject: SubjectService
     ) {
         this.registerForm = this.fb.group({
             first_name: ['', Validators.required],
             last_name: ['', Validators.required],
+            role: ['candidate', Validators.required],
             email: ['', Validators.required],
             phone: ['', Validators.required],
             password: ['', Validators.required],
@@ -78,6 +81,7 @@ export class RegisterComponent implements OnInit {
 
     toggleCandidateRec() {
         this.isCandidate = !this.isCandidate;
+        this.registerForm.patchValue({role: this.isCandidate ? 'candidate' : 'recruiter'});
     }
 
     addReferralEmail(e: MatChipInputEvent) {
@@ -94,9 +98,12 @@ export class RegisterComponent implements OnInit {
     registerUser() {
         this.auth.register(this.registerForm.value).subscribe((dt: any) => {
             this.toastr.success('Registered successfully');
+
+            const token = dt.token;
+
             // Saving token to browser local storage
             localStorage.setItem('token', (dt.hasOwnProperty('token') ? dt.token : ''));
-
+            this.subject.setUserData(dt.token);
             this.router.navigate(['/']);
         });
     }

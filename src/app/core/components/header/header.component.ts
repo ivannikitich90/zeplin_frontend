@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
 
         // Getting user data directly when user logs in
         this.subject.getUserData().subscribe(dt => {
-            this.authUser = dt;
+            this.authUser = jwtDecode(dt);
         });
 
         // Getting user data from local storage
