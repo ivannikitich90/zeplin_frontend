@@ -1,72 +1,3 @@
-//.formContainer {
-//  margin-top: 50px;
-//  width: 50%;
-//  display: flex;
-//  justify-content: center;
-//
-//  .registerForm {
-//    max-width: 680px;
-//    width: 100%;
-//    /* Register/ save-user-info button */
-//    .userInfo {
-//      width: 40%;
-//
-//      .register {
-//        //@include namedBtn;
-//        margin: auto;
-//      }
-//
-//      .register:disabled {
-//        //background-color: $gray !important;
-//      }
-//
-//      .mat-radio-group {
-//        margin: 20px 0;
-//        display: block;
-//        text-align: center;
-//
-//        .mat-radio-button {
-//          margin-left: 10px;
-//        }
-//      }
-//
-//
-//    }
-//
-//    /* User profile image container */
-//    .userImg {
-//      width: 50%;
-//      float: right;
-//
-//      .profileImg {
-//        position: relative;
-//        width: 400px;
-//        height: 400px;
-//        background-size: cover !important;
-//
-//        i {
-//          position: absolute;
-//          right: 2px;
-//          //color: $white;
-//          font-size: 20px;
-//          cursor: pointer;
-//        }
-//      }
-//    }
-//
-//    /* Password show/hide button (only for register form) */
-//    .passToggler {
-//      position: absolute;
-//      right: 0;
-//      top: 5px;
-//      color: gray;
-//      font-size: 17px;
-//      cursor: pointer;
-//    }
-//
-//  }
-//}
-
 .Title {
   padding-top: 48px;
   margin-bottom: 40px
@@ -130,14 +61,14 @@
   font-family: opensans_regular, Helvetica, Arial, sans-serif
 }
 
-.Form_candidate form {
+form {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "Form"
 }
 
-.Form_candidate form .form_inputs {
+form .form_inputs {
   display: grid;
   grid-template-columns: 1.1fr 1.1fr .8fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -145,56 +76,56 @@
   grid-area: Form
 }
 
-.Form_candidate form .form_inputs .email {
+.form .form_inputs .email {
   grid-area: Email
 }
 
-.Form_candidate form .form_inputs .password {
+ form .form_inputs .password {
   grid-area: Password
 }
 
-.Form_candidate form .form_inputs .first_name {
+form .form_inputs .first_name {
   grid-area: First-Name
 }
 
-.Form_candidate form .form_inputs .desired_industry {
+form .form_inputs .desired_industry {
   grid-area: Desired-Industry
 }
 
-.Form_candidate form .form_inputs .desired_role {
+form .form_inputs .desired_role {
   grid-area: Desired-role
 }
 
-.Form_candidate form .form_inputs .phone {
+form .form_inputs .phone {
   grid-area: Phone-Number
 }
 
-.Form_candidate form .form_inputs .retry_password {
+form .form_inputs .retry_password {
   grid-area: Retype-Password
 }
 
-.Form_candidate form .form_inputs .last_name {
+form .form_inputs .last_name {
   grid-area: Last-Name
 }
 
-.Form_candidate form .form_inputs .job_type {
+form .form_inputs .job_type {
   grid-area: job-type
 }
 
-.Form_candidate form .form_inputs div {
+form .form_inputs div {
   flex-direction: column;
   display: flex;
   justify-content: space-between
 }
 
-.Form_candidate form .form_inputs div label {
+form .form_inputs div label {
   color: #444;
   font-size: 14px;
   margin-bottom: 8px;
   font-family: opensans_regular, Helvetica, Arial, sans-serif
 }
 
-.Form_candidate form .form_inputs div input, .Form_candidate form .form_inputs div select {
+form .form_inputs div input, form .form_inputs div select {
   border: 1px solid #b1b1b1;
   border-radius: 5px;
   padding: 10px;
@@ -204,16 +135,16 @@
   margin-bottom: 20px
 }
 
-.Form_candidate form .form_inputs div:last-child {
+form .form_inputs div:last-child {
   align-self: flex-end
 }
 
-.Form_candidate form .form_inputs div:last-child input, .Form_candidate form .form_inputs div:last-child select {
+form .form_inputs div:last-child input, form .form_inputs div:last-child select {
   //max-width: 330px;
   width: 100%;
 }
 
-.Form_candidate form .form_inputs div {
+form .form_inputs div {
   padding-right: 15px;
 }
 
@@ -332,22 +263,22 @@
 
 .content {
   //max-width: 974px;
-  //width:100%;
+  width:100%;
   padding-right: 15px;
   padding-left: 15px;
 }
 
 @media (max-width: 600px) {
-  .Form_candidate form .form_inputs {
+  form .form_inputs {
     display: block;
   }
 
-  .Form_candidate form .form_inputs div input, .Form_candidate form .form_inputs div select,
-  .Form_candidate form .form_inputs div:last-child input, .Form_candidate form .form_inputs div:last-child select {
+  form .form_inputs div input, form .form_inputs div select,
+  form .form_inputs div:last-child input, form .form_inputs div:last-child select {
     max-width: 100%;
   }
 
-  .Form_candidate form .form_inputs div {
+  form .form_inputs div {
     padding-left: 15px;
   }
 }
