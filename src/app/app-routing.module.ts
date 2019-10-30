@@ -12,6 +12,12 @@ const routes: Routes = [
     },
     {
         path: 'auth', loadChildren: './auth/auth.module#AuthModule'
+    },
+    {
+        path: 'recruiter', loadChildren: './recruiter/recruiter.module#RecruiterModule'
+    },
+    {
+        path: 'candidate', loadChildren: './candidate/candidate.module#CandidateModule'
     }
 ];
 

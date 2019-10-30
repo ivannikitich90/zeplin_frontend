@@ -51,9 +51,9 @@ export class LoginComponent implements OnInit, OnDestroy {
 
                     // Saving token to browser local storage
                     localStorage.setItem('token', dt.token);
-                    this.subject.setUserData(dt.token);
-
-                    this.router.navigate(['/']);
+                    const userData = jwtDecode(dt.token);
+                    this.subject.setUserData(userData);
+                    this.router.navigate([(userData.role.name === 'Candidate' ? 'candidate' : 'recruiter') + '/dashboard']);
                     this.dialogRef.close();
                 }
             })

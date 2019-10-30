@@ -6,6 +6,7 @@ import {MatChipInputEvent} from '@angular/material';
 import {AuthService} from '@core/services/auth.service';
 import {ToastrService} from 'ngx-toastr';
 import {SubjectService} from '@core/services/subject.service';
+import * as jwtDecode from 'jwt-decode';
 
 @Component({
     selector: 'app-register',
@@ -104,8 +105,9 @@ export class RegisterComponent implements OnInit {
 
             // Saving token to browser local storage
             localStorage.setItem('token', (dt.hasOwnProperty('token') ? dt.token : ''));
-            this.subject.setUserData(dt.token);
-            this.router.navigate(['/']);
+            const userData = jwtDecode(dt.token);
+            this.subject.setUserData(userData);
+            this.router.navigate([(userData.role.name === 'Candidate' ? 'candidate' : 'recruiter') + '/dashboard']);
         });
     }
 }
