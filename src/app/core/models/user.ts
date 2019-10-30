@@ -1,4 +1,6 @@
-export interface User {
-    email: string,
-    password: string
+export default interface User {
+    first_name?: string;
+    last_name?: string;
+    email?: string;
+    password?: string;
 }

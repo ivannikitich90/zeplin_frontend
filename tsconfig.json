@@ -30,6 +30,9 @@
       ],
       "@fonts/*": [
         "assets/fonts/*"
+      ],
+      "@app/*": [
+        "app/*"
       ]
     }
   }

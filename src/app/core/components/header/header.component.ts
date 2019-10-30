@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {SubjectService} from '@core/services/subject.service';
 import {AuthService} from '@core/services/auth.service';
-import {NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
 import {filter} from 'rxjs/operators';
 import {MatDialog} from '@angular/material';
-import {LoginComponent} from '../../../auth/login/login.component';
 import * as jwtDecode from 'jwt-decode';
+import User from '@core/models/user';
+import {LoginComponent} from '@app/auth/login/login.component';
 
 @Component({
     selector: 'app-header',
@@ -15,7 +16,7 @@ import * as jwtDecode from 'jwt-decode';
 export class HeaderComponent implements OnInit {
     appTheme = 'light';
     routerUrl = '';
-    authUser = {};
+    authUser: User;
 
     constructor(
         private subject: SubjectService,
@@ -34,7 +35,7 @@ export class HeaderComponent implements OnInit {
 
 
         // Getting user data directly when user logs in
-        this.subject.getUserData().subscribe(dt => {
+        this.subject.getUserData().subscribe((dt: User) => {
             this.authUser = jwtDecode(dt);
         });
 

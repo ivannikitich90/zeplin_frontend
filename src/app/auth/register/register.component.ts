@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
 
     registerForm: FormGroup;
     passHidden = true;
-    isCandidate = true;
+    isCandidate = false;
     referralEmails = [];
     readonly separatorKeysCodes: number[] = [ENTER, COMMA];
 
@@ -28,11 +28,11 @@ export class RegisterComponent implements OnInit {
         private subject: SubjectService
     ) {
         this.registerForm = this.fb.group({
-            first_name: ['', Validators.required],
-            last_name: ['', Validators.required],
-            role: ['candidate', Validators.required],
+            first_name: ['test', Validators.required],
+            last_name: ['user', Validators.required],
+            role: ['recruiter', Validators.required],
             email: ['', Validators.required],
-            phone: ['', Validators.required],
+            phone: ['1212121', Validators.required],
             password: ['', Validators.required],
         });
     }
@@ -81,6 +81,7 @@ export class RegisterComponent implements OnInit {
 
     toggleCandidateRec() {
         this.isCandidate = !this.isCandidate;
+        console.log(this.isCandidate)
         this.registerForm.patchValue({role: this.isCandidate ? 'candidate' : 'recruiter'});
     }
 
