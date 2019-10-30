@@ -16,11 +16,11 @@
         </div>
     </div>
 
-    <div class="Form_candidate content">
-        <div class="form_title">
-            <h2 class="title_text">Great! Lets get you set up</h2>
-        </div>
-        <form [formGroup]="registerForm">
+    <form [formGroup]="registerForm">
+        <div class="Form_candidate content">
+            <div class="form_title">
+                <h2 class="title_text">Great! Lets get you set up</h2>
+            </div>
             <div class="form_inputs">
                 <div class="email">
                     <label for="email">{{isCandidate ? 'Email *' : 'Organization or Personal Email *'}}</label>
@@ -75,49 +75,52 @@
                     </div>
                 </ng-container>
             </div>
-        </form>
-    </div>
-    <div class="Profile content">
-        <div class="Profile_data">
-            <div class="Profile_image_pictures">
-                <p>Profile Image</p><img class="glimpse_image_item" src="assets/images/img_avatar3.png"
-                                         alt="persons">
-            </div>
-            <ng-container *ngIf="isCandidate">
-                <div class="Profile_scills">
-                    <p class="Profile_scills_title">Top 3 Skills <span class="Profile_scills_title_italic">(they will help us finding the best recruiter for you)</span>
-                    </p>
-                    <div class="skills">
-                        <div class="skills_buttons delete center">Java<span class="delete">X</span></div>
-                        <div class="skills_buttons add center">Add<span class="add">+</span></div>
-                    </div>
+        </div>
+        <div class="Profile content">
+            <div class="Profile_data">
+                <div class="Profile_image_pictures">
+                    <p>Profile Image</p><img class="glimpse_image_item" src="assets/images/img_avatar3.png"
+                                             alt="persons">
                 </div>
-            </ng-container>
+                <ng-container *ngIf="isCandidate">
+                    <div class="Profile_scills">
+                        <p class="Profile_scills_title">Top 3 Skills <span class="Profile_scills_title_italic">(they will help us finding the best recruiter for you)</span>
+                        </p>
+                        <div class="skills">
+                            <div class="skills_buttons delete center">Java<span class="delete">X</span></div>
+                            <div class="skills_buttons add center">Add<span class="add">+</span></div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="Lindkedin_profile">
+                <label class="Lindkedin_section_text">Linkedin URL *</label>
+                <input type="text" placeholder="https://www.linkedin.com/in/">
+            </div>
+            <div class="referralEmails" *ngIf="isCandidate">
+                <label class="Lindkedin_section_text" for="referralEmails">Referral Emails (Previous Candidates)</label>
+                <mat-form-field class="example-chip-list">
+                    <mat-chip-list #chipList aria-label="Fruit selection">
+                        <mat-chip *ngFor="let email of referralEmails" [selectable]="true"
+                                  [removable]="true" (removed)="removeReferralEmail(email)">
+                            {{email}}
+                            <mat-icon matChipRemove>cancel</mat-icon>
+                        </mat-chip>
+                        <input id="referralEmails"
+                               [matChipInputFor]="chipList"
+                               [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                               [matChipInputAddOnBlur]="true"
+                               (matChipInputTokenEnd)="addReferralEmail($event)">
+                    </mat-chip-list>
+                </mat-form-field>
+            </div>
+            <div class="Button_sign_up">
+                <button class="btn" (click)="registerUser()">Sign Up</button>
+            </div>
         </div>
-        <div class="Lindkedin_profile">
-            <label class="Lindkedin_section_text">Linkedin URL *</label>
-            <input type="text" placeholder="https://www.linkedin.com/in/">
-        </div>
-        <div class="referralEmails" *ngIf="isCandidate">
-            <label class="Lindkedin_section_text" for="referralEmails">Referral Emails (Previous Candidates)</label>
-            <mat-form-field class="example-chip-list">
-                <mat-chip-list #chipList aria-label="Fruit selection">
-                    <mat-chip *ngFor="let email of referralEmails" [selectable]="true"
-                              [removable]="true" (removed)="removeReferralEmail(email)">
-                        {{email}}
-                        <mat-icon matChipRemove>cancel</mat-icon>
-                    </mat-chip>
-                    <input id="referralEmails"
-                           [matChipInputFor]="chipList"
-                           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                           [matChipInputAddOnBlur]="true"
-                           (matChipInputTokenEnd)="addReferralEmail($event)">
-                </mat-chip-list>
-            </mat-form-field>
-        </div>
-        <div class="Button_sign_up">
-            <button class="btn" (click)="registerUser()">Sign Up</button>
-        </div>
-    </div>
+        <app-register-candidate-step2></app-register-candidate-step2>
+        <app-register-candidate-step3></app-register-candidate-step3>
+        <app-register-recruiter-step2></app-register-recruiter-step2>
+    </form>
 </div>
 
