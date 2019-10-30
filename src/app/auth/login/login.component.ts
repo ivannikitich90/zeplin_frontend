@@ -5,6 +5,8 @@ import {API_URL} from '@core/constants/app.config';
 import {Subscription} from 'rxjs';
 import {Router} from '@angular/router';
 import {MatDialogRef} from '@angular/material';
+import * as jwtDecode from 'jwt-decode';
+import {SubjectService} from '@core/services/subject.service';
 
 @Component({
     selector: 'app-login',
@@ -21,7 +23,8 @@ export class LoginComponent implements OnInit, OnDestroy {
         private fb: FormBuilder,
         public auth: AuthService,
         public router: Router,
-        private dialogRef: MatDialogRef<LoginComponent>
+        private dialogRef: MatDialogRef<LoginComponent>,
+        private subject: SubjectService
     ) {
         this.loginForm = this.fb.group({
             email: ['', Validators.required],
@@ -44,11 +47,17 @@ export class LoginComponent implements OnInit, OnDestroy {
         this.subscriptions.push(
             this.auth.login(this.loginForm.value).subscribe((dt: any) => {
 
-                // Saving token to browser local storage
-                localStorage.setItem('token', (dt.hasOwnProperty('token') ? dt.token : ''));
+                if (dt.hasOwnProperty('token')) {
 
-                this.router.navigate(['/']);
-                this.dialogRef.close();
+                    const token = dt.token
+
+                    // Saving token to browser local storage
+                    localStorage.setItem('token', token);
+                    this.subject.setUserData(jwtDecode(token));
+
+                    this.router.navigate(['/']);
+                    this.dialogRef.close();
+                }
             })
         );
     }

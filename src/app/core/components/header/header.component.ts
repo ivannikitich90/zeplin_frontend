@@ -15,7 +15,7 @@ import * as jwtDecode from 'jwt-decode';
 export class HeaderComponent implements OnInit {
     appTheme = 'light';
     routerUrl = '';
-    authUser;
+    authUser = {};
 
     constructor(
         private subject: SubjectService,
@@ -32,6 +32,13 @@ export class HeaderComponent implements OnInit {
             this.routerUrl = event.url;
         });
 
+
+        // Getting user data directly when user logs in
+        this.subject.getUserData().subscribe(dt => {
+            this.authUser = dt;
+        });
+
+        // Getting user data from local storage
         const token = localStorage.getItem('token');
         if (token) {
             this.authUser = jwtDecode(token);

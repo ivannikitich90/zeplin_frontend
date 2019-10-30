@@ -38,7 +38,11 @@ export class RequestInterceptor implements HttpInterceptor {
                 if (message.hasOwnProperty('msg')) {
                     this.toastr.error('', message.msg.replace(/<(.|\n)*?>/g, ''));
                 } else if (message) {
-                    this.toastr.error('', message.replace(/<(.|\n)*?>/g, ''));
+                    if (err.status === 0) {
+                        this.toastr.error('', 'Please check server connection');
+                    } else {
+                        this.toastr.error('', message.replace(/<(.|\n)*?>/g, ''));
+                    }
                 }
             }
         }));

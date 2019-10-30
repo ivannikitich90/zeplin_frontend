@@ -6,6 +6,7 @@ import {Observable, Subject} from 'rxjs';
 })
 export class SubjectService {
     public themeData = new Subject<any>();
+    private userData = new Subject<any>();
 
     constructor() {
     }
@@ -16,5 +17,13 @@ export class SubjectService {
 
     getTheme(): Observable<any> {
         return this.themeData.asObservable();
+    }
+
+    setUserData(value) {
+        this.userData.next(value);
+    }
+
+    getUserData(): Observable<any> {
+        return this.userData.asObservable();
     }
 }

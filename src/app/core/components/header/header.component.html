@@ -56,7 +56,7 @@
         </button>
         <button class="open_login" data-modal-target="#modal" (click)="openLogin()" *ngIf="!auth.loggedIn()">Log in
         </button>
-        <strong class="authUser" *ngIf="auth.loggedIn() && authUser">
+        <strong class="authUser" *ngIf="auth.loggedIn() ">
             Hello, {{authUser.first_name + ' ' + authUser.last_name}}
         </strong>
         <div class="modal" id="modal">
