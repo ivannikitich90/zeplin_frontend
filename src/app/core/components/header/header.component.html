@@ -56,8 +56,8 @@
         </button>
         <button class="open_login" data-modal-target="#modal" (click)="openLogin()" *ngIf="!auth.loggedIn()">Log in
         </button>
-        <strong class="authUser" *ngIf="auth.loggedIn()">
-          <i class="far fa-bell"></i>Hello, {{authUser.first_name + ' ' + authUser.last_name}}
+        <strong class="authUser" *ngIf="auth.loggedIn()" (click)="logout()">
+            Hello, {{authUser.first_name + ' ' + authUser.last_name}}
         </strong>
         <div class="modal" id="modal">
             <div class="modal_content center">

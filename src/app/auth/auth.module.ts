@@ -5,12 +5,11 @@ import {AuthRoutingModule} from './auth-routing.module';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {SharedModule} from '@shared/shared.module';
-import { RegisterCandidateStep2Component } from './register-candidate-step2/register-candidate-step2.component';
-import { RegisterCandidateStep3Component } from './register-candidate-step3/register-candidate-step3.component';
-import { RegisterRecruiterStep2Component } from './register-recruiter-step2/register-recruiter-step2.component';
+import {RegisterCandidateStep2Component} from './register-candidate-step2/register-candidate-step2.component';
+import {RegisterRecruiterStep2Component} from './register-recruiter-step2/register-recruiter-step2.component';
 
 @NgModule({
-    declarations: [ RegisterComponent, RegisterCandidateStep2Component, RegisterCandidateStep3Component, RegisterRecruiterStep2Component],
+    declarations: [RegisterComponent, RegisterCandidateStep2Component, RegisterRecruiterStep2Component],
     imports: [
         CommonModule,
         AuthRoutingModule,

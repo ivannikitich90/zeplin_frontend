@@ -1,90 +1,86 @@
-<p>
-  register-candidate-step2 works!
-</p>
-
 <div class="signup_candidate_step2 content">
-  <h1 class="signup_Title">Now, lets reach out to your first recruiter</h1>
-  <h3 class="signup_SubTitle">Choose one (1) of our top recruiters</h3>
-  <div class="Top_Recruiters">
-    <div class="Recruiter_box">
-      <div class="radio_btn_forChoose">
-        <input type="radio" id="r-option" name="selector">
-        <label for="r-option"></label>
-        <div class="check"></div>
-      </div>
-      <img class="Recruiters_img" src="assets/images/img_avatar3.png">
-      <h4 class="Recruiter_name">Recruiter</h4>
-      <h5 class="Recruiter_position">Industry<br>
-        <span>Machine Learning</span>
-      </h5>
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-      <button>View Profile</button>
+    <h1 class="signup_Title">Now, lets reach out to your first recruiter</h1>
+    <h3 class="signup_SubTitle">Choose one (1) of our top recruiters</h3>
+    <div class="Top_Recruiters">
+        <div class="Recruiter_box">
+            <div class="radio_btn_forChoose">
+                <input type="radio" id="r-option" name="selector">
+                <label for="r-option"></label>
+                <div class="check"></div>
+            </div>
+            <img class="Recruiters_img" src="assets/images/img_avatar3.png">
+            <h4 class="Recruiter_name">Recruiter</h4>
+            <h5 class="Recruiter_position">Industry<br>
+                <span>Machine Learning</span>
+            </h5>
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5"/>
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4"/>
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3"/>
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2"/>
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1"/>
+                <label for="star1" title="text">1 star</label>
+            </div>
+            <button (click)="viewProfile()">View Profile</button>
+        </div>
+        <div class="Recruiter_box">
+            <div class="radio_btn_forChoose">
+                <input type="radio" id="r2-option" name="selector">
+                <label for="r2-option"></label>
+                <div class="check"></div>
+            </div>
+            <img class="Recruiters_img" src="assets/images/img_avatar3.png">
+            <h4 class="Recruiter_name">Recruiter</h4>
+            <h5 class="Recruiter_position">Industry<br>
+                <span>Machine Learning</span>
+            </h5>
+            <div class="rate">
+                <input type="radio" id="star5-2" name="rate" value="5"/>
+                <label for="star5-2" title="text">5 stars</label>
+                <input type="radio" id="star4-2" name="rate" value="4"/>
+                <label for="star4-2" title="text">4 stars</label>
+                <input type="radio" id="star3-2" name="rate" value="3"/>
+                <label for="star3-2" title="text">3 stars</label>
+                <input type="radio" id="star2-2" name="rate" value="2"/>
+                <label for="star2-2" title="text">2 stars</label>
+                <input type="radio" id="star1-2" name="rate" value="1"/>
+                <label for="star1-2" title="text">1 star</label>
+            </div>
+            <button (click)="viewProfile()">View Profile</button>
+        </div>
+        <div class="Recruiter_box">
+            <div class="radio_btn_forChoose">
+                <input type="radio" id="r3-option" name="selector">
+                <label for="r3-option"></label>
+                <div class="check"></div>
+            </div>
+            <img class="Recruiters_img" src="assets/images/img_avatar3.png">
+            <h4 class="Recruiter_name">Recruiter</h4>
+            <h5 class="Recruiter_position">Industry<br>
+                <span>Machine Learning</span>
+            </h5>
+            <div class="rate">
+                <input type="radio" id="star5-3" name="rate" value="5"/>
+                <label for="star5-3" title="text">5 stars</label>
+                <input type="radio" id="star4-3" name="rate" value="4"/>
+                <label for="star4-3" title="text">4 stars</label>
+                <input type="radio" id="star3-3" name="rate" value="3"/>
+                <label for="star3-3" title="text">3 stars</label>
+                <input type="radio" id="star2-3" name="rate" value="2"/>
+                <label for="star2-3" title="text">2 stars</label>
+                <input type="radio" id="star1-3" name="rate" value="1"/>
+                <label for="star1-3" title="text">1 star</label>
+            </div>
+            <button (click)="viewProfile()">View Profile</button>
+        </div>
     </div>
-    <div class="Recruiter_box">
-      <div class="radio_btn_forChoose">
-        <input type="radio" id="r2-option" name="selector">
-        <label for="r2-option"></label>
-        <div class="check"></div>
-      </div>
-      <img class="Recruiters_img" src="assets/images/img_avatar3.png">
-      <h4 class="Recruiter_name">Recruiter</h4>
-      <h5 class="Recruiter_position">Industry<br>
-        <span>Machine Learning</span>
-      </h5>
-      <div class="rate">
-        <input type="radio" id="star5-2" name="rate" value="5" />
-        <label for="star5-2" title="text">5 stars</label>
-        <input type="radio" id="star4-2" name="rate" value="4" />
-        <label for="star4-2" title="text">4 stars</label>
-        <input type="radio" id="star3-2" name="rate" value="3" />
-        <label for="star3-2" title="text">3 stars</label>
-        <input type="radio" id="star2-2" name="rate" value="2" />
-        <label for="star2-2" title="text">2 stars</label>
-        <input type="radio" id="star1-2" name="rate" value="1" />
-        <label for="star1-2" title="text">1 star</label>
-      </div>
-      <button>View Profile</button>
+    <div class="signUp2_btns">
+        <button class="connect_btn" (click)="connectRecruiter()">Connect</button>
+        <button class="skip_btn">Skip</button>
     </div>
-    <div class="Recruiter_box">
-      <div class="radio_btn_forChoose">
-        <input type="radio" id="r3-option" name="selector">
-        <label for="r3-option"></label>
-        <div class="check"></div>
-      </div>
-      <img class="Recruiters_img" src="assets/images/img_avatar3.png">
-      <h4 class="Recruiter_name">Recruiter</h4>
-      <h5 class="Recruiter_position">Industry<br>
-        <span>Machine Learning</span>
-      </h5>
-      <div class="rate">
-        <input type="radio" id="star5-3" name="rate" value="5" />
-        <label for="star5-3" title="text">5 stars</label>
-        <input type="radio" id="star4-3" name="rate" value="4" />
-        <label for="star4-3" title="text">4 stars</label>
-        <input type="radio" id="star3-3" name="rate" value="3" />
-        <label for="star3-3" title="text">3 stars</label>
-        <input type="radio" id="star2-3" name="rate" value="2" />
-        <label for="star2-3" title="text">2 stars</label>
-        <input type="radio" id="star1-3" name="rate" value="1" />
-        <label for="star1-3" title="text">1 star</label>
-      </div>
-      <button>View Profile</button>
-    </div>
-  </div>
-  <div class="signUp2_btns">
-    <button class="connect_btn">Connect</button>
-    <button class="skip_btn">Skip</button>
-  </div>
 </div>
 
