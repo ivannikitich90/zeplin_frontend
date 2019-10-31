@@ -123,22 +123,22 @@
   margin-bottom: 35px
 }
 
-.Profile .Profile_data .Profile_scills .Profile_scills_title {
+.Profile .Profile_data .Profile_skills .Profile_skills_title {
   font-size: 16px;
   color: #444;
   margin-bottom: 22px
 }
 
-.Profile .Profile_data .Profile_scills .Profile_scills_title .Profile_scills_title_italic {
+.Profile .Profile_data .Profile_skills .Profile_skills_title .Profile_skills_title_italic {
   font-family: opensans_italic, Helvetica, Arial, sans-serif
 }
 
-.Profile .Profile_data .Profile_scills .skills {
+.Profile .Profile_data .Profile_skills .skills {
   display: flex;
   margin-bottom: 28px
 }
 
-.Profile .Profile_data .Profile_scills .skills .skills_buttons {
+.Profile .Profile_data .Profile_skills .skills .skills_buttons {
   border-radius: 26px;
   width: 97px;
   padding: 6px;
@@ -148,30 +148,30 @@
   font-size: 16px
 }
 
-.Profile .Profile_data .Profile_scills .skills .skills_buttons span {
+.Profile .Profile_data .Profile_skills .skills .skills_buttons span {
   margin-left: 5px;
   display: block
 }
 
-.Profile .Profile_data .Profile_scills .skills .skills_buttons.delete {
+.Profile .Profile_data .Profile_skills .skills .skills_buttons.delete {
   background: #05a9ee;
   color: #fff;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .15), 0 2px 25px 0 rgba(0, 0, 0, .15)
 }
 
-.Profile .Profile_data .Profile_scills .skills .skills_buttons.delete span {
+.Profile .Profile_data .Profile_skills .skills .skills_buttons.delete span {
   font-size: 16px
 }
 
-.Profile .Profile_data .Profile_scills .skills .skills_buttons.add {
+.Profile .Profile_data .Profile_skills .skills .skills_buttons.add {
   border: 1px solid #444
 }
 
-.Profile .Profile_data .Profile_scills .skills .skills_buttons.add span {
+.Profile .Profile_data .Profile_skills .skills .skills_buttons.add span {
   color: #444
 }
 
-.Profile .Profile_data .Profile_scills .skills .skills_buttons.add span.add {
+.Profile .Profile_data .Profile_skills .skills .skills_buttons.add span.add {
   font-size: 37px;
   font-weight: 500;
   line-height: 0

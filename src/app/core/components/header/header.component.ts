@@ -59,7 +59,7 @@ export class HeaderComponent implements OnInit {
     logout() {
         this.auth.logout().subscribe(() => {
             localStorage.setItem('token', '');
-            this.router.navigate(['auth/login']);
+            this.router.navigate(['/']);
         });
     }
 }

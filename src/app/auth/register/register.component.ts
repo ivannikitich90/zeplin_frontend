@@ -107,7 +107,7 @@ export class RegisterComponent implements OnInit {
             localStorage.setItem('token', (dt.hasOwnProperty('token') ? dt.token : ''));
             const userData = jwtDecode(dt.token);
             this.subject.setUserData(userData);
-            this.router.navigate([(userData.role.name === 'Candidate' ? 'candidate' : 'recruiter') + '/dashboard']);
+            this.router.navigate(['auth/register/' + (userData.role.name === 'Candidate' ? 'candidate' : 'recruiter') + '/step2']);
         });
     }
 }
