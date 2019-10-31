@@ -20,10 +20,10 @@ export class RegisterCandidateStep2Component implements OnInit {
 
 
     viewProfile() {
-        this.dialog.open(RecruiterProfileComponent, {width: '350px', height: '466px'});
+        this.dialog.open(RecruiterProfileComponent, {width: '350px', height: '535px'});
     }
 
     connectRecruiter() {
-        this.dialog.open(RegistrationFinalComponent, {width: '350px', height: '466px'});
+        this.dialog.open(RegistrationFinalComponent, {width: '350px', height: '380px'});
     }
 }

@@ -1,0 +1,41 @@
+.reg_final_modal {
+  text-align: center;
+  padding: 20px 6px;
+
+  h2 {
+    font-family: opensans_bold;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.25;
+    color: #3c3f40;
+  }
+
+  h4 {
+    font-family: opensans_regular;
+    font-size: 16px;
+    color: #3c3f40;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  button {
+    width: 187px;
+    height: 54px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(74, 74, 74, 0.24);
+    font-family: opensans_bold;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 16px;
+
+    &.what_now_btn {
+      background-color: #36d26b;
+    }
+
+    &.Dashboard_btn {
+      background-color: #05a9ee;
+    }
+  }
+}
