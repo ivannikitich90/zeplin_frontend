@@ -7,10 +7,10 @@
             <h3 class="Looking_title_text title_text">What are you here for</h3>
         </div>
         <div class="Looking_buttons">
-            <button class="Looking_button_Candidate btn" [class.selectedRole]="isCandidate"
+            <button class="Looking_button_Candidate btn" [class.selectedRole]="!isCandidate"
                     (click)="toggleCandidateRec()">Looking For Candidate
             </button>
-            <button class="Looking_for_job btn" [class.selectedRole]="!isCandidate" (click)="toggleCandidateRec()">
+            <button class="Looking_for_job btn" [class.selectedRole]="isCandidate" (click)="toggleCandidateRec()">
                 Looking For A Job
             </button>
         </div>

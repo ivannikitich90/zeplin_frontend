@@ -1,264 +1,264 @@
 <div class="dashboard_body content">
 
-  <div class="search_section">
-    <div class="search_input">
-      <input type="text" placeholder="Machine Learning">
-    </div>
-    <div class="search_input">
-      <label>Location</label>
-      <input type="text" placeholder="San Jose">
-    </div>
-    <button><i class="fas fa-search"></i></button>
-  </div>
-
-  <div class="dashboard_sections">
-    <div class="dashboard_top_info">
-      <h2 class="dashboard__title">My Applications</h2>
-      <div class="filters">
-        <span>Filter By</span>
-        <a href="">Last Updated</a>
-        <a href="">Stage</a>
-      </div>
+    <div class="search_section">
+        <div class="search_input">
+            <input type="text" placeholder="Machine Learning">
+        </div>
+        <div class="search_input">
+            <label>Location</label>
+            <input type="text" placeholder="San Jose">
+        </div>
+        <button><i class="fas fa-search"></i></button>
     </div>
 
-    <div class="applications_boxes">
-
-      <div class="applications_box">
-        <p class="updated_text">updated <span>2 days</span> ago</p>
-
-        <img class="app_img" src="assets/images/gg.png">
-        <span class="google_text">Google</span>
-        <h6>Job Title</h6>
-        <p>Software Developer</p>
-        <div class="stage">
-          <h6>Stage 2</h6>
-          <div class="stage-rate">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
+    <div class="dashboard_sections">
+        <div class="dashboard_top_info">
+            <h2 class="dashboard__title">My Applications</h2>
+            <div class="filters">
+                <span>Filter By</span>
+                <a href="">Last Updated</a>
+                <a href="">Stage</a>
+            </div>
         </div>
-        <p>Application Submitted</p>
-        <h6>Recruiter</h6>
-        <div class="recruter_info">
-          <img class="app_img2" src="assets/images/img_avatar3.png">
-          <p>Claudia Owen</p>
-        </div>
-        <div class="app_bottom_btns">
-          <button class="req_update">Request Update</button>
-          <button class="see_details">See Details</button>
-        </div>
-      </div>
 
-      <div class="applications_box">
-        <button class="Update_Requested">Update Requested</button>
-        <p class="updated_text">updated <span>2 days</span> ago</p>
+        <div class="applications_boxes">
 
-        <img class="app_img" src="assets/images/gg.png">
-        <span class="google_text">Google</span>
-        <h6>Job Title</h6>
-        <p>Software Developer</p>
-        <div class="stage">
-          <h6>Stage 2</h6>
-          <div class="stage-rate">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+            <div class="applications_box">
+                <p class="updated_text">updated <span>2 days</span> ago</p>
 
-        </div>
-        <p>Application Submitted</p>
-        <h6>Recruiter</h6>
-        <div class="recruter_info">
-          <img class="app_img2" src="assets/images/img_avatar3.png">
-          <p>Claudia Owen</p>
-        </div>
-        <div class="app_bottom_btns">
-          <button class="req_update">Update Pending</button>
-          <button class="see_details">See Details</button>
-        </div>
-      </div>
+                <img class="app_img" src="assets/images/gg.png">
+                <span class="google_text">Google</span>
+                <h6>Job Title</h6>
+                <p>Software Developer</p>
+                <div class="stage">
+                    <h6>Stage 2</h6>
+                    <div class="stage-rate">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-      <div class="applications_box">
-        <button class="Application_Closed">Application Closed</button>
-        <p class="updated_text">updated <span>6 days</span> ago</p>
+                </div>
+                <p>Application Submitted</p>
+                <h6>Recruiter</h6>
+                <div class="recruter_info">
+                    <img class="app_img2" src="assets/images/img_avatar3.png">
+                    <p>Claudia Owen</p>
+                </div>
+                <div class="app_bottom_btns">
+                    <button class="req_update">Request Update</button>
+                    <button class="see_details" (click)="viewJobDetails()">See Details</button>
+                </div>
+            </div>
 
-        <img class="app_img" src="assets/images/gg.png">
-        <span class="google_text">Google</span>
-        <h6>Job Title</h6>
-        <p>Software Developer</p>
-        <div class="stage">
-          <h6>Stage 2</h6>
-          <div class="stage-rate">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+            <div class="applications_box">
+                <button class="Update_Requested">Update Requested</button>
+                <p class="updated_text">updated <span>2 days</span> ago</p>
 
+                <img class="app_img" src="assets/images/gg.png">
+                <span class="google_text">Google</span>
+                <h6>Job Title</h6>
+                <p>Software Developer</p>
+                <div class="stage">
+                    <h6>Stage 2</h6>
+                    <div class="stage-rate">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+                <p>Application Submitted</p>
+                <h6>Recruiter</h6>
+                <div class="recruter_info">
+                    <img class="app_img2" src="assets/images/img_avatar3.png">
+                    <p>Claudia Owen</p>
+                </div>
+                <div class="app_bottom_btns">
+                    <button class="req_update" (click)="viewAppDetails()">Update Pending</button>
+                    <button class="see_details" (click)="viewJobDetails()">See Details</button>
+                </div>
+            </div>
+
+            <div class="applications_box">
+                <button class="Application_Closed">Application Closed</button>
+                <p class="updated_text">updated <span>6 days</span> ago</p>
+
+                <img class="app_img" src="assets/images/gg.png">
+                <span class="google_text">Google</span>
+                <h6>Job Title</h6>
+                <p>Software Developer</p>
+                <div class="stage">
+                    <h6>Stage 2</h6>
+                    <div class="stage-rate">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+                <p>Application Submitted</p>
+                <h6>Recruiter</h6>
+                <div class="recruter_info">
+                    <img class="app_img2" src="assets/images/img_avatar3.png">
+                    <p>Claudia Owen</p>
+                </div>
+                <div class="app_bottom_btns">
+                    <button class="Submit_rating" (click)="viewAppDetails()">Submit Rating</button>
+                    <button class="see_details" (click)="viewJobDetails()">See Details</button>
+                </div>
+            </div>
+            <div class="right_arrow"><span> > </span></div>
         </div>
-        <p>Application Submitted</p>
-        <h6>Recruiter</h6>
-        <div class="recruter_info">
-          <img class="app_img2" src="assets/images/img_avatar3.png">
-          <p>Claudia Owen</p>
-        </div>
-        <div class="app_bottom_btns">
-          <button class="Submit_rating">Submit Rating</button>
-          <button class="see_details">See Details</button>
-        </div>
-      </div>
-      <div class="right_arrow"> <span> > </span></div>
     </div>
-  </div>
 
 
-  <div class="dashboard_sections">
-    <div class="dashboard_top_info">
-      <h2 class="dashboard__title">My Connections</h2>
-      <div class="filters">
-        <span>Filter By</span>
-        <a href="">Newest</a>
-        <a href="">Match</a>
-      </div>
+    <div class="dashboard_sections">
+        <div class="dashboard_top_info">
+            <h2 class="dashboard__title">My Connections</h2>
+            <div class="filters">
+                <span>Filter By</span>
+                <a href="">Newest</a>
+                <a href="">Match</a>
+            </div>
+        </div>
+
+        <div class="applications_boxes">
+
+            <div class="applications_box">
+                <p class="updated_text">updated <span>2 days</span> ago</p>
+
+                <img class="app_img" src="assets/images/img_avatar3.png">
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5"/>
+                    <label for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4"/>
+                    <label for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3"/>
+                    <label for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2"/>
+                    <label for="star2" title="text">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1"/>
+                    <label for="star1" title="text">1 star</label>
+                </div>
+                <h6>Job of Interest</h6>
+                <p>Software Developer</p>
+                <div class="stage">
+                    <h6>Slots</h6>
+                    <div class="stage-rate">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+                <p>3 Open Slots</p>
+                <h6>Company</h6>
+                <div class="recruter_info">
+                    <img class="app_img2" src="assets/images/yelp-logo.png">
+                    <p>Yelp</p>
+                </div>
+                <div class="app_bottom_btns">
+                    <button class="req_update">See Jobs</button>
+                    <button class="see_details">See Details</button>
+                </div>
+            </div>
+
+            <div class="applications_box">
+                <button class="Update_Requested">Pending</button>
+                <p class="updated_text">updated <span>2 days</span> ago</p>
+
+                <img class="app_img" src="assets/images/img_avatar3.png">
+                <div class="rate">
+                    <input type="radio" id="star52" name="rate" value="5"/>
+                    <label for="star52" title="text">5 stars</label>
+                    <input type="radio" id="star42" name="rate" value="4"/>
+                    <label for="star42" title="text">4 stars</label>
+                    <input type="radio" id="star32" name="rate" value="3"/>
+                    <label for="star32" title="text">3 stars</label>
+                    <input type="radio" id="star22" name="rate" value="2"/>
+                    <label for="star22" title="text">2 stars</label>
+                    <input type="radio" id="star12" name="rate" value="1"/>
+                    <label for="star12" title="text">1 star</label>
+                </div>
+                <h6>Job of Interest</h6>
+                <p>Software Developer</p>
+                <div class="stage">
+                    <h6>Slots</h6>
+                    <div class="stage-rate">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+                <p>3 Open Slots</p>
+                <h6>Company</h6>
+                <div class="recruter_info">
+                    <img class="app_img2" src="assets/images/yelp-logo.png">
+                    <p>Yelp</p>
+                </div>
+                <div class="app_bottom_btns">
+                    <button class="req_update">Cancel</button>
+                    <button class="see_details" (click)="viewJobDetails()">See Details</button>
+                </div>
+            </div>
+
+            <div class="applications_box">
+                <button class="Application_Closed">Waitlisted</button>
+                <p class="updated_text">updated <span>2 days</span> ago</p>
+
+                <img class="app_img" src="assets/images/img_avatar3.png">
+                <div class="rate">
+                    <input type="radio" id="star53" name="rate" value="5"/>
+                    <label for="star53" title="text">5 stars</label>
+                    <input type="radio" id="star43" name="rate" value="4"/>
+                    <label for="star43" title="text">4 stars</label>
+                    <input type="radio" id="star33" name="rate" value="3"/>
+                    <label for="star33" title="text">3 stars</label>
+                    <input type="radio" id="star23" name="rate" value="2"/>
+                    <label for="star23" title="text">2 stars</label>
+                    <input type="radio" id="star13" name="rate" value="1"/>
+                    <label for="star13" title="text">1 star</label>
+                </div>
+                <h6>Job of Interest</h6>
+                <p>Software Developer</p>
+                <div class="stage">
+                    <h6>Slots</h6>
+                    <div class="stage-rate">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+                <p>No Open Slots</p>
+                <h6>Company</h6>
+                <div class="recruter_info">
+                    <img class="app_img2" src="assets/images/yelp-logo.png">
+                    <p>Yelp</p>
+                </div>
+                <div class="app_bottom_btns">
+                    <button class="req_update">Cancel</button>
+                    <button class="see_details">See Details</button>
+                </div>
+
+            </div>
+
+            <div class="right_arrow"><span> > </span></div>
+        </div>
     </div>
-
-    <div class="applications_boxes">
-
-      <div class="applications_box">
-        <p class="updated_text">updated <span>2 days</span> ago</p>
-
-        <img class="app_img" src="assets/images/img_avatar3.png">
-        <div class="rate">
-          <input type="radio" id="star5" name="rate" value="5"/>
-          <label for="star5" title="text">5 stars</label>
-          <input type="radio" id="star4" name="rate" value="4"/>
-          <label for="star4" title="text">4 stars</label>
-          <input type="radio" id="star3" name="rate" value="3"/>
-          <label for="star3" title="text">3 stars</label>
-          <input type="radio" id="star2" name="rate" value="2"/>
-          <label for="star2" title="text">2 stars</label>
-          <input type="radio" id="star1" name="rate" value="1"/>
-          <label for="star1" title="text">1 star</label>
-        </div>
-        <h6>Job of Interest</h6>
-        <p>Software Developer</p>
-        <div class="stage">
-          <h6>Slots</h6>
-          <div class="stage-rate">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-        <p>3 Open Slots</p>
-        <h6>Company</h6>
-        <div class="recruter_info">
-          <img class="app_img2" src="assets/images/yelp-logo.png">
-          <p>Yelp</p>
-        </div>
-        <div class="app_bottom_btns">
-          <button class="req_update">See Jobs</button>
-          <button class="see_details">See Details</button>
-        </div>
-      </div>
-
-      <div class="applications_box">
-        <button class="Update_Requested">Pending</button>
-        <p class="updated_text">updated <span>2 days</span> ago</p>
-
-        <img class="app_img" src="assets/images/img_avatar3.png">
-        <div class="rate">
-          <input type="radio" id="star52" name="rate" value="5"/>
-          <label for="star52" title="text">5 stars</label>
-          <input type="radio" id="star42" name="rate" value="4"/>
-          <label for="star42" title="text">4 stars</label>
-          <input type="radio" id="star32" name="rate" value="3"/>
-          <label for="star32" title="text">3 stars</label>
-          <input type="radio" id="star22" name="rate" value="2"/>
-          <label for="star22" title="text">2 stars</label>
-          <input type="radio" id="star12" name="rate" value="1"/>
-          <label for="star12" title="text">1 star</label>
-        </div>
-        <h6>Job of Interest</h6>
-        <p>Software Developer</p>
-        <div class="stage">
-          <h6>Slots</h6>
-          <div class="stage-rate">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-        <p>3 Open Slots</p>
-        <h6>Company</h6>
-        <div class="recruter_info">
-          <img class="app_img2" src="assets/images/yelp-logo.png">
-          <p>Yelp</p>
-        </div>
-        <div class="app_bottom_btns">
-          <button class="req_update">Cancel</button>
-          <button class="see_details">See Details</button>
-        </div>
-      </div>
-
-      <div class="applications_box">
-        <button class="Application_Closed">Waitlisted</button>
-        <p class="updated_text">updated <span>2 days</span> ago</p>
-
-        <img class="app_img" src="assets/images/img_avatar3.png">
-        <div class="rate">
-          <input type="radio" id="star53" name="rate" value="5"/>
-          <label for="star53" title="text">5 stars</label>
-          <input type="radio" id="star43" name="rate" value="4"/>
-          <label for="star43" title="text">4 stars</label>
-          <input type="radio" id="star33" name="rate" value="3"/>
-          <label for="star33" title="text">3 stars</label>
-          <input type="radio" id="star23" name="rate" value="2"/>
-          <label for="star23" title="text">2 stars</label>
-          <input type="radio" id="star13" name="rate" value="1"/>
-          <label for="star13" title="text">1 star</label>
-        </div>
-        <h6>Job of Interest</h6>
-        <p>Software Developer</p>
-        <div class="stage">
-          <h6>Slots</h6>
-          <div class="stage-rate">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-        <p>No Open Slots</p>
-        <h6>Company</h6>
-        <div class="recruter_info">
-          <img class="app_img2" src="assets/images/yelp-logo.png">
-          <p>Yelp</p>
-        </div>
-        <div class="app_bottom_btns">
-          <button class="req_update">Cancel</button>
-          <button class="see_details">See Details</button>
-        </div>
-
-      </div>
-
-      <div class="right_arrow"> <span> > </span></div>
-    </div>
-  </div>
 
 </div>

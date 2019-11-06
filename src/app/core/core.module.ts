@@ -19,6 +19,8 @@ import {FooterComponent} from '@core/components/footer/footer.component';
 import {LoginComponent} from '../auth/login/login.component';
 import {RecruiterProfileComponent} from './components/modals/recruiter-profile/recruiter-profile.component';
 import {RegistrationFinalComponent} from './components/modals/registration-final/registration-final.component';
+import {ApplicationDetailsComponent} from '@core/components/modals/application-details/application-details.component';
+import {JobDetailsComponent} from './components/modals/job-details/job-details.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -37,7 +39,9 @@ export function tokenGetter() {
         HomeComponent,
         LoginComponent,
         RecruiterProfileComponent,
-        RegistrationFinalComponent
+        RegistrationFinalComponent,
+        ApplicationDetailsComponent,
+        JobDetailsComponent
     ],
     imports: [
         CommonModule,
@@ -78,7 +82,9 @@ export function tokenGetter() {
     entryComponents: [
         LoginComponent,
         RecruiterProfileComponent,
-        RegistrationFinalComponent
+        RegistrationFinalComponent,
+        ApplicationDetailsComponent,
+        JobDetailsComponent
     ]
 })
 export class CoreModule {

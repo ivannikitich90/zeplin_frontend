@@ -30,6 +30,6 @@ export class RegisterRecruiterStep2Component implements OnInit {
     postJob() {
         // this.recruiter.addJob(this.recruiterJobForm.value).subscribe(dt => {
         // });
-        this.router.navigate(['/']);
+        this.router.navigate(['recruiter/dashboard']);
     }
 }
