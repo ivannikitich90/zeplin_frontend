@@ -19,11 +19,11 @@ export class DashboardComponent implements OnInit {
     }
 
     viewAppDetails() {
-        this.dialog.open(ApplicationDetailsComponent, {width: '350px', height: '535px'});
+        this.dialog.open(ApplicationDetailsComponent, {width: '350px', height: 'auto'});
     }
 
 
     viewJobDetails() {
-        this.dialog.open(JobDetailsComponent, {width: '350px', height: '535px'});
+        this.dialog.open(JobDetailsComponent, {width: '350px', height: 'auto'});
     }
 }

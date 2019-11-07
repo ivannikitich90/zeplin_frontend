@@ -1,0 +1,133 @@
+.recruter-profile-modal {
+  position: relative;
+
+  .modal__close {
+    color: #444444;
+    font-size: 30px;
+    font-family: opensans_bold;
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    cursor: pointer;
+  }
+
+  .Recruiter_box {
+    padding: 5px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #ffffff;
+    text-align: center;
+
+    .posted {
+      font-size: 12px;
+
+      span {
+        color: #838283;
+        font-weight: bold;
+      }
+    }
+
+    h1 {
+      margin-top: 30px;
+      font-family: opensans_bold;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: #3c3f40;
+    }
+
+    img {
+      border-radius: 50%;
+      margin: 17px auto;
+
+      &.user__img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    p {
+      font-family: opensans_regular;
+      font-size: 14px;
+      color: #838283;
+      text-align: left;
+    }
+
+    h4 {
+      margin-top: 15px;
+      font-family: opensans_bold;
+      font-size: 16px;
+      color: #2e3132;
+      font-weight: bold;
+      padding-top: 10px;
+      padding-bottom: 6px;
+      text-align: left;
+
+      span {
+        color: #05a9ee;
+      }
+    }
+
+    h5 {
+      font-family: opensans_regular;
+      font-size: 14px;
+      text-align: center;
+      color: #444444;
+      padding-bottom: 8px;
+    }
+
+    h6 {
+      width: 160px;
+      margin: auto;
+      height: 2px;
+      background-color: #f7f7f7;
+    }
+
+    .skills_btns {
+      margin-top: 20px;
+
+      button {
+        display: inline-block;
+        box-sizing: content-box;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        width: auto;
+        float: left;
+        padding: 5px 22px;
+        font-family: opensans_regular;
+        font-weight: 300;
+        font-size: 15px;
+        color: #ffffff;
+        background-color: #05a9ee;
+        height: 28px;
+        border-radius: 26px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15), 0 2px 25px 0 rgba(0, 0, 0, 0.15);
+        border: solid 1px #05a9ee;
+      }
+    }
+
+    button {
+      max-width: 150px;
+      width: 100%;
+      height: 54px;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+      box-shadow: 0 2px 4px 0 rgba(74, 74, 74, 0.24);
+      font-family: opensans_bold;
+      font-weight: bold;
+
+      &.got_it_btn {
+        background-color: #36d26b;
+        color: #ffffff;
+        margin: 40px 12px 16px 12px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+
+}
