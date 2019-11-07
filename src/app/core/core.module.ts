@@ -21,6 +21,9 @@ import {RecruiterProfileComponent} from './components/modals/recruiter-profile/r
 import {RegistrationFinalComponent} from './components/modals/registration-final/registration-final.component';
 import {ApplicationDetailsComponent} from '@core/components/modals/application-details/application-details.component';
 import {JobDetailsComponent} from './components/modals/job-details/job-details.component';
+import {SaveJobComponent} from './components/modals/save-job/save-job.component';
+import {RecruitmentProcessUpdateComponent} from './components/modals/recruitment-process-update/recruitment-process-update.component';
+import {SaveSlotComponent} from './components/modals/save-slot/save-slot.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -41,7 +44,10 @@ export function tokenGetter() {
         RecruiterProfileComponent,
         RegistrationFinalComponent,
         ApplicationDetailsComponent,
-        JobDetailsComponent
+        JobDetailsComponent,
+        SaveJobComponent,
+        RecruitmentProcessUpdateComponent,
+        SaveSlotComponent
     ],
     imports: [
         CommonModule,
@@ -84,7 +90,10 @@ export function tokenGetter() {
         RecruiterProfileComponent,
         RegistrationFinalComponent,
         ApplicationDetailsComponent,
-        JobDetailsComponent
+        JobDetailsComponent,
+        SaveJobComponent,
+        SaveSlotComponent,
+        RecruitmentProcessUpdateComponent
     ]
 })
 export class CoreModule {
