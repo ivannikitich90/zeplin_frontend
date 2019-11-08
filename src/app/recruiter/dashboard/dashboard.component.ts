@@ -21,19 +21,19 @@ export class DashboardComponent implements OnInit {
     }
 
     openAddJobDialog() {
-        this.dialog.open(SaveJobComponent, {width: '350px', height: '535px'});
+        this.dialog.open(SaveJobComponent, {width: '350px', height: 'auto'});
     }
 
     openAddSlotDialog() {
-        this.dialog.open(SaveSlotComponent, {width: '350px', height: '535px'});
+        this.dialog.open(SaveSlotComponent, {width: '350px', height: 'auto'});
     }
 
     openJobDetailsDialog() {
-        this.dialog.open(JobDetailsComponent, {width: '350px', height: '535px'});
+        this.dialog.open(JobDetailsComponent, {width: '350px', height: 'auto'});
     }
 
     openProcessUpdateDialog() {
-        this.dialog.open(RecruitmentProcessUpdateComponent, {width: '350px', height: '535px'});
+        this.dialog.open(RecruitmentProcessUpdateComponent, {width: '350px', height: 'auto'});
     }
 
 }

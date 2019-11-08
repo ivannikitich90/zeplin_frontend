@@ -1,0 +1,175 @@
+.recruter-profile-modal {
+  position: relative;
+
+  .modal__close {
+    color: #444444;
+    font-size: 30px;
+    font-family: opensans_bold;
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    cursor: pointer;
+  }
+
+  .Recruiter_box {
+    padding: 5px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #ffffff;
+    text-align: center;
+
+    h1 {
+      margin-top: 30px;
+      font-family: opensans_bold;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: #3c3f40;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-family: opensans_regular;
+      font-size: 16px;
+      text-align: center;
+      color: #3c3f40;
+    }
+
+    button {
+      max-width: 150px;
+      width: 100%;
+      height: 54px;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+      box-shadow: 0 2px 4px 0 rgba(74, 74, 74, 0.24);
+      font-family: opensans_bold;
+      font-weight: bold;
+
+      &.post_job_btn {
+        background-color: #36d26b;
+        color: #ffffff;
+        margin: 12px 12px 16px 12px;
+      }
+
+      &.Delete_Job_btn {
+        background-color: #444444;
+        border: solid 1px #444444;
+        color: #ffffff;
+        margin: 0px 12px 16px 12px;
+      }
+
+      &.Cancel_btn {
+        background-color: transparent;
+        color: #444444;
+        border: solid 1px #444444;
+      }
+    }
+
+    div {
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin-top: 20px;
+
+      label {
+        font-family: opensans_regular;
+        font-size: 14px;
+        color: #444444;
+      }
+
+      textarea {
+        min-height: 200px;
+        border-radius: 5px;
+        border: solid 1px #b1b1b1;
+        width: 100%;
+        text-align: center;
+        padding: 24px;
+        font-family: opensans_regular;
+        font-size: 14px;
+        font-style: italic;
+        color: #838283;
+      }
+      input {
+        height: 40px;
+        border-radius: 5px;
+        border: solid 1px #b1b1b1;
+        width: 100%;
+        padding-left: 10px;
+      }
+      select {
+        height: 40px;
+        border-radius: 5px;
+        border: solid 1px #b1b1b1;
+        width: 100%;
+        padding-left: 10px;
+      }
+    }
+
+    form {
+
+      .Preferred_Skills {
+
+        label {
+
+        }
+
+        .skills {
+          display: flex;
+          margin-bottom: 28px;
+
+          .skills_buttons {
+            display:flex;
+            border-radius: 26px;
+            width: 97px;
+            padding: 6px;
+            margin-right: 15px;
+            justify-content: space-evenly;
+            font-family: opensans_regular, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+
+            span {
+              margin-left: 5px;
+              display: block;
+            }
+
+            &.delete {
+              background: #05a9ee;
+              color: #fff;
+              box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .15), 0 2px 25px 0 rgba(0, 0, 0, .15);
+
+              span {
+                font-size: 16px;
+              }
+            }
+
+            &.add {
+              border: 1px solid #444;
+
+              span {
+                color: #444;
+
+                &.add {
+                  font-size: 37px;
+                  font-weight: 500;
+                  line-height: 0;
+                }
+              }
+
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+
+}
+
+
